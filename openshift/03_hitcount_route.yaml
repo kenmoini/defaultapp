@@ -3,12 +3,14 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: nu-was-demo-hitcount-rt
+  annotations:
+    haproxy.router.openshift.io/rewrite-target: /hitcount
 spec:
   to:
     kind: Service
     name: nu-was-demo-hitcount-svc
     weight: 100
   port:
-    targetPort: 9080
+    targetPort: "9080-tcp"
   wildcardPolicy: None
-  path: /hitcount
+  path: /

@@ -23,15 +23,12 @@ spec:
     type: Rolling
   template:
     metadata:
-      annotations:
-        openshift.io/generated-by: OpenShiftNewApp
-      creationTimestamp: null
       labels:
         app: nu-was-demo
         deploymentconfig: nu-was-demo
     spec:
       containers:
-        - image: quay.io/kenmoini/nu-was-demo
+        - image: quay.io/kenmoini/nu-was-demo:latest
           imagePullPolicy: Always
           name: nu-was-demo
           ports:
