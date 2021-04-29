@@ -4,7 +4,7 @@ apiVersion: route.openshift.io/v1
 metadata:
   name: nu-was-demo-snoop-rt
   annotations:
-    haproxy.router.openshift.io/rewrite-target: /snoop
+    haproxy.router.openshift.io/rewrite-target: /snoop/
 spec:
   to:
     kind: Service
