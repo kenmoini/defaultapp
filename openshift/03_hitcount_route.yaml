@@ -4,7 +4,7 @@ apiVersion: route.openshift.io/v1
 metadata:
   name: nu-was-demo-hitcount-rt
   annotations:
-    haproxy.router.openshift.io/rewrite-target: /hitcount
+    #haproxy.router.openshift.io/rewrite-target: /hitcount
 spec:
   to:
     kind: Service
